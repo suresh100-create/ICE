@@ -51,10 +51,11 @@ public class CusipApp {
 				}
 
 			}
-
+                        if(cusipHeaderRow>1) {
 			String keyCUSIP = tempCusipMap.get(cusipHeaderRow - 1);
 			String valuePrice = lastPricerow;
 			resultMap.put(keyCUSIP, valuePrice);
+		        }
 			resultMap.entrySet().forEach(System.out::println);
 
 		} catch (IOException e) {
